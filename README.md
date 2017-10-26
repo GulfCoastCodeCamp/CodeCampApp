@@ -1,2 +1,0 @@
-# CodeCampApp
-companion app
