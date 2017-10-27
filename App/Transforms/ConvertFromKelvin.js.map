@@ -1,0 +1,1 @@
+{"version":3,"file":"ConvertFromKelvin.js","sourceRoot":"","sources":["ConvertFromKelvin.ts"],"names":[],"mappings":"AAAA,eAAe,CAAC,MAAc,EAAE,EAAE;IAChC,MAAM,OAAO,GAAG,MAAM,GAAG,MAAM,CAAA;IAC/B,MAAM,UAAU,GAAG,CAAC,OAAO,GAAG,MAAM,CAAC,GAAG,EAAE,CAAA;IAE1C,MAAM,CAAC,IAAI,CAAC,KAAK,CAAC,UAAU,CAAC,CAAA;AAC/B,CAAC,CAAA"}

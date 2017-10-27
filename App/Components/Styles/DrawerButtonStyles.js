@@ -6,4 +6,5 @@ export default {
     color: Colors.snow,
     marginVertical: Metrics.baseMargin
   }
+  
 }
