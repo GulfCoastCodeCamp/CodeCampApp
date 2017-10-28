@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
-
+import RoundedButton from '../../App/Components/RoundedButton'
 import { Images } from '../Themes'
 
 // Styles
@@ -18,14 +18,15 @@ export default class LaunchScreen extends Component {
           </View>
 
           <View style={styles.section} >
-            <Image source={Images.ready} />
-            <Text style={styles.sectionText}>
-              This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite.
-
-              Hello World
+            <Text style={{ fontSize: 35, fontWeight: 'bold', color:'white' ,textAlign:'center'} }>
+              The cutting edge will arrive gulf coast again
+              
+               Fall 2018!
             </Text>
           </View>
-
+          <RoundedButton>
+            Check 2017
+          </RoundedButton>
           <DevscreensButton />
         </ScrollView>
       </View>
