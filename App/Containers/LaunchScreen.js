@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
-import RoundedButton from '../../App/Components/RoundedButton'
+import PreviousCampButton from '../../App/Components/PreviousCampButton'
 import { Images } from '../Themes'
 
 // Styles
@@ -24,9 +24,9 @@ export default class LaunchScreen extends Component {
                Fall 2018!
             </Text>
           </View>
-          <RoundedButton>
+          <PreviousCampButton>
             Check 2017
-          </RoundedButton>
+          </PreviousCampButton>
           <DevscreensButton />
         </ScrollView>
       </View>
