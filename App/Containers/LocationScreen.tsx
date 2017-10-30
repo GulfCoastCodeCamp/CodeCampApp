@@ -1,14 +1,15 @@
 import React from 'react'
-import { View, Text, Image, ScrollView, Animated, LayoutAnimation, TouchableOpacity, Linking } from 'react-native'
+import { View, Text, Image, ScrollView, Animated, LayoutAnimation, TouchableOpacity, Linking, PanResponder, PanResponderInstance } from 'react-native'
 import { Images, Metrics } from '../Themes'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import styles from './Styles/LocationScreenStyles'
 import VenueMap from '../Components/VenueMap'
 interface IState {
     scrollY: Animated.Value,
-    mapTouchStart: string,
+    mapTouchStart: number,
     mapViewMode: boolean
 }
+const MAP_TAP_THRESHOLD = 100
 
 class LocationScreen extends React.Component<{}, IState>{
     openMaps(daddr = 'Shelby+Hall,+150+Jaguar+Dr,+Mobile,+AL+36608') {
@@ -94,20 +95,36 @@ class LocationScreen extends React.Component<{}, IState>{
 
     private scrollSpot: number;
     private activeMapHeight: number;
+    private _panResponder:PanResponderInstance
 
     constructor(props) {
         super(props)
 
         this.state = {
             scrollY: new Animated.Value(0),
-            mapTouchStart: '',
+            mapTouchStart:0,
             mapViewMode: false
         }
 
         this.scrollSpot = Metrics.screenHeight / 4.25
         this.activeMapHeight = Metrics.screenHeight - this.scrollSpot
     }
-
+    componentWillMount() {
+        // Get the map tap check
+        this._panResponder = PanResponder.create({
+            onStartShouldSetPanResponder: () => true,
+            onPanResponderGrant: (e) => this.setState({ mapTouchStart: e.nativeEvent.timestamp }),
+            onPanResponderRelease: this.checkMapTap
+        })
+    }
+    checkMapTap = (e) => {
+        if (e.nativeEvent.timestamp - this.state.mapTouchStart < MAP_TAP_THRESHOLD) {
+            LayoutAnimation.configureNext({ ...LayoutAnimation.Presets.linear, duration: 500 })
+            this.refs.scrolly.scrollTo({ y: this.scrollSpot, animated: true })
+            this.setState({ mapViewMode: true })
+        }
+        this.setState({ mapTouchStart: null })
+    }
     render() {
         const { mapViewMode } = this.state
         const { event } = Animated
@@ -123,8 +140,8 @@ class LocationScreen extends React.Component<{}, IState>{
                         {this.renderBackground()}
                         {this.reanderHeader()}
                     </View>
-                    <View ref='mapContainer' >
-                        <VenueMap mapViewMode={mapViewMode} onCloseMap={this.onCloseMap} scrollEnabled={mapViewMode} style={[styles.map, mapViewMode && { height: this.activeMapHeight }]} />
+                    <View ref='mapContainer' {...this._panResponder.panHandlers} >
+                        <VenueMap mapViewMode={mapViewMode} onCloseMap={this.onCloseMap.bind(this)} scrollEnabled={mapViewMode} style={[styles.map, mapViewMode && { height: this.activeMapHeight }]} />
                     </View>
                     <View style={styles.mapActions}>
                         <TouchableOpacity onPress={() => this.openMaps()}>
