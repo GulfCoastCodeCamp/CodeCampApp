@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "apisauce": "^0.14.0",
+        "date-fns": "^1.29.0",
         "format-json": "^1.0.3",
         "lodash": "^4.17.2",
         "mobile-center": "^0.10.0",
@@ -43,6 +44,8 @@
         "react-native-config": "^0.6.0",
         "react-native-device-info": "0.11.0",
         "react-native-drawer": "^2.3.0",
+        "react-native-linear-gradient": "^2.3.0",
+        "react-native-maps": "^0.17.1",
         "react-native-vector-icons": "4.3.0",
         "react-navigation": "1.0.0-beta.11",
         "react-redux": "^5.0.2",

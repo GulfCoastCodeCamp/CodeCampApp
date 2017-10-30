@@ -5,6 +5,24 @@ import Colors from './Colors'
 // This file is for a reusable grouping of Theme items.
 // Similar to an XML fragment layout in Android
 
+export interface ApplicationStylesType {
+  screen
+  darkLabelContainer
+  darkLabel
+  groupContainer
+  sectionTitle
+  linearGradient
+}
+
+export interface ScreenStylesType {
+  mainContainer
+  backgroundImage
+  container
+  section
+  sectionHeader
+  sectionText
+}
+
 const ApplicationStyles = {
   screen: {
     mainContainer: {

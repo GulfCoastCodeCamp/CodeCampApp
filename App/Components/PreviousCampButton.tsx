@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Modal } from 'react-native'
 import RoundedButton from './RoundedButton'
 import PropTypes from 'prop-types'
-
+import PrevScreen from '../Containers/PrevScreen'
 
 interface IState{
     showModal:boolean
@@ -32,7 +32,7 @@ class PreviousCampButton extends React.Component<{}, IState>{
                 <Modal
                     visible={this.state.showModal}
                     onRequestClose={this.toggleModal}>
-                    {/* <PresentationScreen screenProps={{ toggle: this.toggleModal }} /> */}
+                    {<PrevScreen screenProps={{ toggle: this.toggleModal }} />}
                 </Modal>
             </View>
         )
