@@ -14,15 +14,15 @@ export default StyleSheet.create({
     paddingTop: 5,
     paddingBottom: 1,
     paddingHorizontal: 28,
-    borderTopWidth: 1,
-    // borderTopColor: 'rgba(255,255,255,0.3)',
-    // backgroundColor: Colors.blue
+    borderTopWidth: 2,
+    borderTopColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: '#25262B'
   },
   tabBarLabel: {
     // fontFamily: 'Montserrat-Medium',
     fontSize: 9,
     letterSpacing: 0,
-    color: Colors.ember
+    color: Colors.snow
   },
   card: {
     opacity: 1,

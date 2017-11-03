@@ -10,7 +10,8 @@ export default StyleSheet.create({
     marginTop: Metrics.doubleSection,
     height: Metrics.images.logo,
     width: Metrics.images.logo,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    borderRadius: Metrics.images.logo/2.0
   },
   centered: {
     alignItems: 'center'

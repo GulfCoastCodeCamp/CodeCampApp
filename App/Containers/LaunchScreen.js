@@ -19,7 +19,7 @@ export default class LaunchScreen extends Component {
 
           <View style={styles.section} >
             <Text style={{ fontSize: 35, fontWeight: 'bold', color:'white' ,textAlign:'center'} }>
-              The cutting edge will arrive gulf coast again
+              The cutting edge will arrive gulf coast again {'\n'}
               
                Fall 2018!
             </Text>

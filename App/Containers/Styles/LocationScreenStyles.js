@@ -6,7 +6,7 @@ export default StyleSheet.create({
     headingContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 150,
+        marginTop: 30,
         backgroundColor:'transparent'
     },
     mainHeading: {

@@ -8,7 +8,6 @@ import styles from './Styles/AboutScreenStyles'
 import Twitter from '../Components/Twitter'
 import ConferenceAnnouncements from '../Components/ConferenceAnnouncements'
 import CodeCamp from '../Components/CodeCamp'
-
 import { connect } from 'react-redux'
 
 class AboutScreen extends React.Component<{}, {}>{
@@ -23,11 +22,11 @@ class AboutScreen extends React.Component<{}, {}>{
             <View >
                 <ScrollView style={styles.tabContainer}>
                     <View style={{ flex: 1 }}>
-                        <Image source={Images.mainbackground} style={styles.backgroundImage} resizeMode='stretch' />
-                        <CodeCamp />
-                        <ConferenceAnnouncements />
-                        <Twitter />
-
+                        <GradientBackgroud>
+                            <CodeCamp />
+                            <ConferenceAnnouncements />
+                            <Twitter />
+                        </GradientBackgroud>
                     </View>
                 </ScrollView>
             </View>

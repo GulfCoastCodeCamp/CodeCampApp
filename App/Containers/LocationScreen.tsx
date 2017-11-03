@@ -9,6 +9,9 @@ interface IState {
     mapTouchStart: number,
     mapViewMode: boolean
 }
+
+import GradientBackgroud from '../Components/GradientBackgroud'
+
 const MAP_TAP_THRESHOLD = 100
 
 class LocationScreen extends React.Component<{}, IState>{
@@ -95,14 +98,14 @@ class LocationScreen extends React.Component<{}, IState>{
 
     private scrollSpot: number;
     private activeMapHeight: number;
-    private _panResponder:PanResponderInstance
+    private _panResponder: PanResponderInstance
 
     constructor(props) {
         super(props)
 
         this.state = {
             scrollY: new Animated.Value(0),
-            mapTouchStart:0,
+            mapTouchStart: 0,
             mapViewMode: false
         }
 
@@ -136,9 +139,10 @@ class LocationScreen extends React.Component<{}, IState>{
                     scrollEventThrottle={10}
                     scrollEnabled={!this.state.mapViewMode}>
                     <View>
-                        <Image source={Images.mainbackground} style={styles.backgroundImage} resizeMode='stretch' />
-                        {this.renderBackground()}
-                        {this.reanderHeader()}
+                        <GradientBackgroud>
+                            {this.renderBackground()}
+                            {this.reanderHeader()}
+                        </GradientBackgroud>
                     </View>
                     <View ref='mapContainer' {...this._panResponder.panHandlers} >
                         <VenueMap mapViewMode={mapViewMode} onCloseMap={this.onCloseMap.bind(this)} scrollEnabled={mapViewMode} style={[styles.map, mapViewMode && { height: this.activeMapHeight }]} />
@@ -146,9 +150,10 @@ class LocationScreen extends React.Component<{}, IState>{
                     <View style={styles.mapActions}>
                         <TouchableOpacity onPress={() => this.openMaps()}>
                             <View style={styles.getDirections}>
+
                                 <View style={styles.addressContainer}>
                                     <Text style={styles.venueName}>
-                                        Shelby Hall 
+                                        Shelby Hall
                                     </Text>
                                     <Text style={styles.venueAddress}>
                                         150 Jaguar Dr{'\n'}
@@ -156,9 +161,10 @@ class LocationScreen extends React.Component<{}, IState>{
                                     </Text>
                                 </View>
                                 <View style={styles.directionsIcon}>
-                                    <Icon name="car" size={30} color='black'/>
+                                    <Icon name="car" size={30} color='black' />
                                     <Text style={styles.directionsLabel}>Directions</Text>
                                 </View>
+
                             </View>
                         </TouchableOpacity>
                     </View>
