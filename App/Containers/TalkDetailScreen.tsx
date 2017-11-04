@@ -1,12 +1,26 @@
 import React from 'react'
-import { View ,Text} from 'react-native'
+import { View, Text, TouchableOpacity} from 'react-native'
+import GradientBackground from '../Components/GradientBackgroud'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
-class TalkDetailScreen extends React.Component<{}, {}> {
+interface IProp{
+    navigation
+}
+
+class TalkDetailScreen extends React.Component<IProp, {}> {
+    goBack: () => {
+       
+    }
+
     render() {
         return (
-            <View>
+            <GradientBackground>
+                <TouchableOpacity onPress={this.goBack}>
+                    <Icon name='long-arrow-left' size={30} color='white'/>
+                    <Text>Back</Text>
+                </TouchableOpacity>
                 <Text>TalkDetailScreen</Text>
-            </View>
+            </GradientBackground>
         );
     }
 }

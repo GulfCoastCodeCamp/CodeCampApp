@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -39,7 +40,9 @@
 		35101BDEA9AA4E63A4E952E6 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF4410F98D34138B76754AE /* libReactNativeConfig.a */; };
 		3AC7BC5062AB0714F3AC59B8 /* libPods-codecampTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED66382D50825A7BBBFD8A2 /* libPods-codecampTests.a */; };
 		45E809D05ADB4480847F274D /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CC106C0F0F4C51AA0377B6 /* libRNDeviceInfo.a */; };
+		4FC51FB712C647E0B258032D /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 248C61A7CFC34DBE8B3C2E9D /* libBVLinearGradient.a */; };
 		57BED0599A354988905E2D30 /* MobileCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D830FF125D84CFFB9AD331C /* MobileCenter-Config.plist */; };
+		58386E509E92441D81FBCB8C /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B51289338DCC47DE81975D69 /* libAirMaps.a */; };
 		5CC99F023DBB4B26BAAAB50B /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A0820BE30B4A5E952A959C /* Zocial.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6E7B1A7F52E941A3A1501E65 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BB48B13AE543C8910EC593 /* libz.tbd */; };
@@ -59,8 +62,6 @@
 		ECB0E20D400248F5AADD4ABA /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE12E6452F2A44AB98422316 /* libCodePush.a */; };
 		EFC08E43D2B949DFAF9FE4BF /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EBA6BB5C69A42C8B4130340 /* SimpleLineIcons.ttf */; };
 		F515FB33388A4B2ABC8C53EE /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5B2ED27D2F4D83A1A1C1CF /* Ionicons.ttf */; };
-		4FC51FB712C647E0B258032D /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 248C61A7CFC34DBE8B3C2E9D /* libBVLinearGradient.a */; };
-		58386E509E92441D81FBCB8C /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B51289338DCC47DE81975D69 /* libAirMaps.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
+		};
+		294D87B61FAD5B6A00A8667F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C01C5E583474D41A09CF26D /* AirMaps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
+			remoteInfo = AirMaps;
+		};
+		294D87BC1FAD5B6A00A8667F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A3405CE3AA2493C8DC2AC24 /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = BVLinearGradient;
+		};
+		294D87BE1FAD5B6A00A8667F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A3405CE3AA2493C8DC2AC24 /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64AA15081EF7F30100718508;
+			remoteInfo = "BVLinearGradient-tvOS";
 		};
 		29ECC5931FA43B5F00A524BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -398,6 +420,7 @@
 		1F37D75E2E5A093943292A38 /* Pods-codecamp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codecamp-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-codecamp-tvOSTests/Pods-codecamp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		216C276A0B5A411AAE8208DF /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		23D44EEEB9882A98B2414323 /* Pods-codecamp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codecamp-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-codecamp-tvOS/Pods-codecamp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		248C61A7CFC34DBE8B3C2E9D /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		26A503EC9E3142B4927EA6E9 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* codecamp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codecamp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* codecamp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codecamp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -411,17 +434,20 @@
 		4D3885659F9D1E006B722362 /* libPods-codecamp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-codecamp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51054D36DC0F442A9F69B753 /* libRNMobileCenter.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNMobileCenter.a; sourceTree = "<group>"; };
 		54D00BD48B914C504F903CF8 /* libPods-codecamp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-codecamp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3405CE3AA2493C8DC2AC24 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		5DC6E91F82CC4A95ADAF3473 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		86E9A31766C0DD016014F8D7 /* Pods-codecamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codecamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-codecamp/Pods-codecamp.debug.xcconfig"; sourceTree = "<group>"; };
+		8C01C5E583474D41A09CF26D /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		92C0BD3494DD4673B06B4278 /* libRNCrashes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCrashes.a; sourceTree = "<group>"; };
 		93AE3BA4268E121E9CF20827 /* Pods-codecamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codecamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-codecamp/Pods-codecamp.release.xcconfig"; sourceTree = "<group>"; };
 		9EA4C1A706583565B2038830 /* Pods-codecamp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codecamp-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-codecamp-tvOSTests/Pods-codecamp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6B4F9056A9B43219356469A /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		A6BB48B13AE543C8910EC593 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B51289338DCC47DE81975D69 /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 		BA78ACD037004353B1092DAF /* RNAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAnalytics.xcodeproj; path = "../node_modules/mobile-center-analytics/ios/RNAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		C98700336EB2C418E3FC7B08 /* Pods-codecampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codecampTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-codecampTests/Pods-codecampTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC90399D41264A18BA83DAA4 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
@@ -431,10 +457,6 @@
 		F9ABD8F8520840CFA557B8D3 /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		FED66382D50825A7BBBFD8A2 /* libPods-codecampTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-codecampTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDB9AE5C8404B5CB50A714F /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
-		5A3405CE3AA2493C8DC2AC24 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; name = "BVLinearGradient.xcodeproj"; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		248C61A7CFC34DBE8B3C2E9D /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		8C01C5E583474D41A09CF26D /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		B51289338DCC47DE81975D69 /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -617,6 +639,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		294D87B31FAD5B6A00A8667F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				294D87B71FAD5B6A00A8667F /* libAirMaps.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		294D87B81FAD5B6A00A8667F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				294D87BD1FAD5B6A00A8667F /* libBVLinearGradient.a */,
+				294D87BF1FAD5B6A00A8667F /* libBVLinearGradient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		29F519161FA3AE7F00ADDE52 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +666,8 @@
 				92C0BD3494DD4673B06B4278 /* libRNCrashes.a */,
 				3AF4410F98D34138B76754AE /* libReactNativeConfig.a */,
 				EE12E6452F2A44AB98422316 /* libCodePush.a */,
+				248C61A7CFC34DBE8B3C2E9D /* libBVLinearGradient.a */,
+				B51289338DCC47DE81975D69 /* libAirMaps.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -924,10 +965,12 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = G2WU3D89U5;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = G2WU3D89U5;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -954,6 +997,14 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 294D87B31FAD5B6A00A8667F /* Products */;
+					ProjectRef = 8C01C5E583474D41A09CF26D /* AirMaps.xcodeproj */;
+				},
+				{
+					ProductGroup = 294D87B81FAD5B6A00A8667F /* Products */;
+					ProjectRef = 5A3405CE3AA2493C8DC2AC24 /* BVLinearGradient.xcodeproj */;
+				},
 				{
 					ProductGroup = 29F5193C1FA3AE7F00ADDE52 /* Products */;
 					ProjectRef = F9ABD8F8520840CFA557B8D3 /* CodePush.xcodeproj */;
@@ -1096,6 +1147,27 @@
 			fileType = archive.ar;
 			path = libReact.a;
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		294D87B71FAD5B6A00A8667F /* libAirMaps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAirMaps.a;
+			remoteRef = 294D87B61FAD5B6A00A8667F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		294D87BD1FAD5B6A00A8667F /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 294D87BC1FAD5B6A00A8667F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		294D87BF1FAD5B6A00A8667F /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 294D87BE1FAD5B6A00A8667F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		29ECC5941FA43B5F00A524BC /* libthird-party.a */ = {
@@ -1667,6 +1739,8 @@
 			baseConfigurationReference = 39EDC528F15C5B210CCA73D9 /* Pods-codecampTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G2WU3D89U5;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1704,6 +1778,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codecamp.app/codecamp";
 			};
 			name = Debug;
@@ -1713,6 +1788,8 @@
 			baseConfigurationReference = C98700336EB2C418E3FC7B08 /* Pods-codecampTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = G2WU3D89U5;
 				HEADER_SEARCH_PATHS = (
@@ -1747,6 +1824,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/codecamp.app/codecamp";
 			};
 			name = Release;
@@ -1757,6 +1835,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = G2WU3D89U5;
@@ -1781,6 +1861,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gulfcoastcodecamp.codecamp;
 				PRODUCT_NAME = codecamp;
+				PROVISIONING_PROFILE = "fa0893e3-6ab7-45ca-9455-01ce9f4e32f3";
+				PROVISIONING_PROFILE_SPECIFIER = "code camp ad hoc";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1791,6 +1873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G2WU3D89U5;
 				HEADER_SEARCH_PATHS = (
@@ -1814,6 +1897,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gulfcoastcodecamp.codecamp;
 				PRODUCT_NAME = codecamp;
+				PROVISIONING_PROFILE = "fa0893e3-6ab7-45ca-9455-01ce9f4e32f3";
+				PROVISIONING_PROFILE_SPECIFIER = "code camp ad hoc";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -2009,6 +2094,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiangdong Zhang (SG69UDSZ2B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2050,7 +2136,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xiangdong Zhang (G2WU3D89U5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
