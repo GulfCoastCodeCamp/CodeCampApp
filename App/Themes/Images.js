@@ -23,7 +23,13 @@ const images = {
   backButton: require('../Images/Icons/back-button.png'),
   closeButton: require('../Images/Icons/close-button.png'),
   codeCamp: require('../Images/launch-icon.jpg'),
-  shelbyhall:require('../Images/shelbyhall.jpg')
+  shelbyhall: require('../Images/shelbyhall.jpg'),
+  opening: require('../Images/opening.jpg'),
+  close: require('../Images/opening.jpg'),
+  afterParty: require('../Images/afterParty.jpg'),
+  break: require('../Images/break.jpg'),
+  lunch: require('../Images/lunch.jpg'),
+  registration: require('../Images/registration.jpg')
 }
 
 export default images

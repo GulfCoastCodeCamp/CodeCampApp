@@ -22,6 +22,9 @@ export default StyleSheet.create({
         backgroundColor: Colors.clear
     },
     inactiveDay: {
+        minWidth:50,
+        marginTop:10,
+        height:25,
         backgroundColor: Colors.clear,
         // fontFamily: 'Montserrat-Light',
         fontSize: 8,
@@ -29,6 +32,9 @@ export default StyleSheet.create({
         letterSpacing: 0
     },
     activeDay: {
+        minWidth: 50,
+        marginTop: 10,
+        height: 25,
         backgroundColor: Colors.clear,
         // fontFamily: 'Montserrat-SemiBold',
         fontSize: 15,

@@ -43,9 +43,29 @@ const navigator: any = StackNavigator({
     })
 
 const TabNav = TabNavigator({
-    Schedule: { screen: navigator },
-    Location: { screen: LocationScreen },
-    About: { screen: AboutScreen }
+    Schedule: {
+        screen: navigator, navigationOptions : {
+            tabBarLabel: 'Schedule',
+            tabBarIcon: ({ focused }) => (
+                <Icon name='calendar' size={30} color={focused ? 'lightblue' : 'white'} />
+            )
+        }
+    },
+    Location: {
+        screen: LocationScreen, navigationOptions : {
+            tabBarLabel: 'Location',
+            tabBarIcon: ({ focused }) => (
+                <Icon name='map-marker' size={30} color={focused ? 'lightblue' : 'white'} />
+            )
+        } },
+    About: {
+        screen: AboutScreen,
+        navigationOptions :{
+            tabBarLabel: 'General Info',
+            tabBarIcon: ({ focused }) => (
+                <Icon name='info-circle' size={30} color={focused ? 'lightblue' : 'white'} />
+            )
+        }}
 }, {
         key: 'Schedule',
         tabBarComponent: TabBarBottom,

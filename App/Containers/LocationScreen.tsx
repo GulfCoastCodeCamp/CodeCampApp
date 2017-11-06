@@ -89,12 +89,7 @@ class LocationScreen extends React.Component<{}, IState>{
             </Animated.View>
         )
     }
-    static navigationOptions = {
-        tabBarLabel: 'Location',
-        tabBarIcon: ({ focused }) => (
-            <Icon name='map-marker' size={30} color={focused ? 'blue' : 'lightblue'} />
-        )
-    }
+    
 
     private scrollSpot: number;
     private activeMapHeight: number;
@@ -133,42 +128,44 @@ class LocationScreen extends React.Component<{}, IState>{
         const { event } = Animated
         return (
             <View>
-                <ScrollView
-                    ref='scrolly'
-                    onScroll={event([{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }])}
-                    scrollEventThrottle={10}
-                    scrollEnabled={!this.state.mapViewMode}>
-                    <View>
-                        <GradientBackgroud>
+                <GradientBackgroud>
+                    <ScrollView
+                        ref='scrolly'
+                        onScroll={event([{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }])}
+                        scrollEventThrottle={10}
+                        scrollEnabled={!this.state.mapViewMode}>
+                        <View>
+
                             {this.renderBackground()}
                             {this.reanderHeader()}
-                        </GradientBackgroud>
-                    </View>
-                    <View ref='mapContainer' {...this._panResponder.panHandlers} >
-                        <VenueMap mapViewMode={mapViewMode} onCloseMap={this.onCloseMap.bind(this)} scrollEnabled={mapViewMode} style={[styles.map, mapViewMode && { height: this.activeMapHeight }]} />
-                    </View>
-                    <View style={styles.mapActions}>
-                        <TouchableOpacity onPress={() => this.openMaps()}>
-                            <View style={styles.getDirections}>
 
-                                <View style={styles.addressContainer}>
-                                    <Text style={styles.venueName}>
-                                        Shelby Hall
-                                    </Text>
-                                    <Text style={styles.venueAddress}>
-                                        150 Jaguar Dr{'\n'}
-                                        Mobile, AL 36608
-                                    </Text>
-                                </View>
-                                <View style={styles.directionsIcon}>
-                                    <Icon name="car" size={30} color='black' />
-                                    <Text style={styles.directionsLabel}>Directions</Text>
-                                </View>
+                        </View>
+                        <View ref='mapContainer' {...this._panResponder.panHandlers} >
+                            <VenueMap mapViewMode={mapViewMode} onCloseMap={this.onCloseMap.bind(this)} scrollEnabled={mapViewMode} style={[styles.map, mapViewMode && { height: this.activeMapHeight }]} />
+                        </View>
+                        <View style={styles.mapActions}>
+                            <TouchableOpacity onPress={() => this.openMaps()}>
+                                <View style={styles.getDirections}>
 
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-                </ScrollView>
+                                    <View style={styles.addressContainer}>
+                                        <Text style={styles.venueName}>
+                                            Shelby Hall
+                                    </Text>
+                                        <Text style={styles.venueAddress}>
+                                            150 Jaguar Dr{'\n'}
+                                            Mobile, AL 36608
+                                    </Text>
+                                    </View>
+                                    <View style={styles.directionsIcon}>
+                                        <Icon name="car" size={30} color='black' />
+                                        <Text style={styles.directionsLabel}>Directions</Text>
+                                    </View>
+
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    </ScrollView>
+                </GradientBackgroud>
             </View>
         )
     }

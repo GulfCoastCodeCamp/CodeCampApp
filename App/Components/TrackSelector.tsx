@@ -4,16 +4,21 @@ import LinearGradient from 'react-native-linear-gradient'
 import styles from './Styles/TrackSelector'
 
 const DayToggle = props => {
+    const touchSize = {
+        width: 100,
+        height:45
+    }
+
     const { track, onPressIn } = props
     const dayStyle = (day) =>
-        track === day ? styles.activeDay : styles.inactiveDay
+        track === day ? styles.activeDay  :  styles.inactiveDay 
 
     return (
         <LinearGradient
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             locations={[0.0, 0.38, 1.0]}
-            colors={['#858F99', '#828791', '#626873']}
+            colors={['#4c669f', '#3b5998', '#192f6a']}
             style={styles.headerGradient}>
             <View style={styles.dayToggle}>
                 <TouchableOpacity onPressIn={() => onPressIn(0)}>

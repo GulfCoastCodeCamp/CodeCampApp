@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { ApplicationStyles, Colors, Fonts } from '../../Themes/'
 
+
 export default StyleSheet.create({
     ...ApplicationStyles.screen,
     infiniteRed: {
@@ -19,8 +20,8 @@ export default StyleSheet.create({
     },
     infiniteRedIcon: {
         marginTop: 20,
-        width: 50,
-        height:50
+        width: 70,
+        height:70
     },
     line: {
         marginTop: 30,

@@ -9,7 +9,8 @@ interface AnnouncementStyleType {
 
 const AnnouncementStyle: AnnouncementStyleType = {
     announcement: {
-        flex:1
+        flex: 1,
+        marginTop: 10
     },
     heading: {
         fontFamily: Fonts.type.description,
@@ -17,7 +18,8 @@ const AnnouncementStyle: AnnouncementStyleType = {
         letterSpacing: 0.2,
         backgroundColor: Colors.transparent,
         color: '#FDE5FF',
-        textAlign:'center'
+        textAlign: 'center',
+        marginTop: 10
     },
     subheading: {
         marginBottom: 30,

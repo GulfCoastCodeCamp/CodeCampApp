@@ -13,7 +13,7 @@ export default StyleSheet.create({
     },
     active: {
         marginLeft: 6,
-        marginRight: 34,
+        marginRight: 6,
         borderRadius: 5,
         shadowOffset: {
             width: 1,
@@ -43,7 +43,8 @@ export default StyleSheet.create({
         // fontFamily: 'Montserrat-SemiBold',
         fontSize: 17,
         color: Colors.darkPurple,
-        letterSpacing: 0
+        letterSpacing: 0,
+        fontWeight:'800'
     },
     name: {
         // fontFamily: 'Montserrat-Light',

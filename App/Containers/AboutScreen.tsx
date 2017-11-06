@@ -11,24 +11,21 @@ import CodeCamp from '../Components/CodeCamp'
 import { connect } from 'react-redux'
 
 class AboutScreen extends React.Component<{}, {}>{
-    static navigationOptions = {
-        tabBarLabel: 'General Info',
-        tabBarIcon: ({ focused }) => (
-            <Icon name='info-circle' size={30} color={focused ? 'blue' : 'lightblue'} />
-        )
-    }
+    
     render() {
         return (
             <View >
+                <GradientBackgroud>
                 <ScrollView style={styles.tabContainer}>
                     <View style={{ flex: 1 }}>
-                        <GradientBackgroud>
+                     
                             <CodeCamp />
                             <ConferenceAnnouncements />
                             <Twitter />
-                        </GradientBackgroud>
+                    
                     </View>
-                </ScrollView>
+                    </ScrollView>
+                </GradientBackgroud>    
             </View>
         )
     }

@@ -16,7 +16,7 @@ export default StyleSheet.create({
     paddingHorizontal: 28,
     borderTopWidth: 2,
     borderTopColor: 'rgba(255,255,255,0.3)',
-    backgroundColor: '#25262B'
+    backgroundColor: '#192f6a'
   },
   tabBarLabel: {
     // fontFamily: 'Montserrat-Medium',

@@ -1,7 +1,10 @@
 import React from 'react'
-import { Animated, View, Text, TouchableWithoutFeedback, Image, TouchableOpacity } from 'react-native'
+import { Animated, View, Text, TouchableWithoutFeedback, Image, TouchableOpacity,Linking } from 'react-native'
 import FadeIn from 'react-native-fade-in-image'
 import styles from './Styles/TalkStyles'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import {Metrics} from '../Themes'
+import { format } from 'date-fns'
 
 interface IProp {
     name,
@@ -9,6 +12,7 @@ interface IProp {
     avatarURL,
     start,
     duration,
+    speakerInfo,
     style,
     onPress(): void
 }
@@ -18,6 +22,23 @@ interface IState {
 }
 
 class Talk extends React.Component<IProp, IState>{
+     twitterus = (handler) => {
+         const appURL = 'twitter://post?screen_name=' + handler
+         const webURL = 'https://twitter.com/intent/user?screen_name=' + handler
+        Linking.canOpenURL(appURL).then((supported) =>
+            Linking.openURL(supported ? appURL : webURL)
+        )
+    }
+
+
+    renderTwitter = (speakerInfo: any) => {
+        if (speakerInfo && speakerInfo[0] && speakerInfo[0].twitter)
+        {
+            return (<TouchableOpacity style={{ margin: 10 }} onPress={() => { this.twitterus(speakerInfo[0].twitter)}}>
+                <Icon name="twitter" size={35} color="lightblue" />
+            </TouchableOpacity>)
+        }
+    }
 
 
     constructor() {
@@ -48,8 +69,8 @@ class Talk extends React.Component<IProp, IState>{
             title,
             avatarURL,
             start,
-            duration
-
+            duration,
+            speakerInfo
         } = this.props
 
         const animatedStyle = {
@@ -58,6 +79,7 @@ class Talk extends React.Component<IProp, IState>{
 
         const containerStyles = [
             styles.container,
+            styles.active,
             animatedStyle
         ]
         return (
@@ -78,22 +100,32 @@ class Talk extends React.Component<IProp, IState>{
                                 <Text style={styles.name}>{name}</Text>
                                 <Text style={styles.title}>{title}</Text>
                             </View>
-                            {/* <FadeIn>
-                                <Image style={styles.avatar} source={{ uri: avatarURL }} />
-                            </FadeIn> */}
+                            <FadeIn>
+                                <Icon name="user-circle" color="lightblue" size={60}/>
+                            </FadeIn>
 
                         </View>
                         <View style={{
                             flex: 1,
-                            flexDirection: 'row'
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            marginLeft: Metrics.doubleBaseMargin,
+                            marginRight:Metrics.doubleBaseMargin
                         }}>
+                            <View style={{
+                                flex: 1, flexDirection: 'column'
+                            }}>    
                             <Text>Start</Text>
-                            <Text>{start}</Text>
+                            <Text>{format(start, 'h:mmA')}</Text>
+                            </View>    
+                            <View style={{
+                                flex: 1, flexDirection: 'column'
+                            }}>  
                             <Text>Duration</Text>
-                            <Text>{duration}</Text>
-                            <TouchableOpacity>
-                                <Text>Twitter</Text>
-                            </TouchableOpacity>
+                            <Text>{`${duration} Minutes`}</Text>
+                            </View>    
+                            {this.renderTwitter(speakerInfo)}
+                            
                         </View>
                     </Animated.View>
                 </TouchableWithoutFeedback>

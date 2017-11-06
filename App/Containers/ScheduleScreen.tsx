@@ -26,15 +26,6 @@ interface IProp {
 
 class ScheduleScreen extends React.Component<IProp, IState> {
 
-    static navigationOptions = {
-        tabBarLabel: 'Schedule',
-        tabBarIcon: ({ focused }) => (
-            <Icon name='calendar' size={30} color={focused ? 'blue' : 'lightblue'} />
-        )
-    }
-    /**
-     *
-     */
     constructor() {
         super();
         this.state = {
@@ -74,17 +65,18 @@ class ScheduleScreen extends React.Component<IProp, IState> {
     renderItem: any = ({ item }) => {
         if (item.type === 'talk') {
             return (
-                <Talk style={{flex:1}}
+                <Talk style={{ flex: 1 }}
                     name={item.speaker}
                     title={item.title}
                     avatarURL={item.image}
                     start={item.time}
                     duration={item.duration}
+                    speakerInfo={item.speakerInfo}
                     onPress={() => this.onEventPress(item)} />
             )
         } else {
             return (
-                <Break title={item.title} start={item.time} duration={item.duration}/>
+                <Break title={item.title} start={item.time} duration={item.duration} type={item.type} />
             )
         }
     }
@@ -95,9 +87,10 @@ class ScheduleScreen extends React.Component<IProp, IState> {
         var d = filter((item) => { return item.trackNumber === activeTrack }, data.schedule);
         return (
             <View>
-                <ScrollView style={styles.tabContainer}>
-                    <View style={{ flex: 1 }}>
-                        <GradientBackgroud>
+                <GradientBackgroud>
+
+                    <ScrollView style={styles.tabContainer}>
+                        <View style={{ flex: 1 }}>
                             <TrackSelector track={activeTrack} onPressIn={this.setActiveTrack} />
                             <FlatList
                                 ref='scheduleList'
@@ -108,9 +101,10 @@ class ScheduleScreen extends React.Component<IProp, IState> {
                                 getItemLayout={this.getItemLayout}
                                 showsVerticalScrollIndicator={false}
                             />
-                        </GradientBackgroud>
-                    </View>
-                </ScrollView>
+                        </View>
+                    </ScrollView>
+                </GradientBackgroud>
+
             </View>
         );
     }
