@@ -12,7 +12,7 @@ import {
 import Talk from '../Components/Talk'
 import Break from '../Components/Break'
 import GradientBackgroud from '../Components/GradientBackgroud'
-import Icon from 'react-native-vector-icons/FontAwesome'
+
 import data from '../../Features/schedules'
 interface IState {
 
@@ -55,9 +55,7 @@ class ScheduleScreen extends React.Component<IProp, IState> {
     onEventPress = (item) => {
         const { navigation } = this.props;
         if (item.type === 'talk') {
-            navigation.navigate('TalkDetail')
-        } else {
-            navigation.navigate('BreakDetail')
+            navigation.navigate('TalkDetail', {"talk":item})
         }
 
     }

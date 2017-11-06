@@ -8,7 +8,6 @@ import styles from '../Navigation/Styles/NavigationStyles'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Images } from '../Themes'
 import ScheduleScreen from './ScheduleScreen';
-import BreakDetailScreen from './BreakDetailScreen'
 import TalkDetailScreen from './TalkDetailScreen'
 
 // class PrevScreen extends React.Component<{}, {}>{
@@ -34,8 +33,7 @@ import TalkDetailScreen from './TalkDetailScreen'
 
 const navigator: any = StackNavigator({
     Home: { screen: ScheduleScreen },
-    TalkDetail: { screen: TalkDetailScreen },
-    BreakDetail: { screen: BreakDetailScreen }
+    TalkDetail: { screen: TalkDetailScreen }
 }, {
         headerMode: 'none',
         initialRouteName: 'Home',

@@ -116,13 +116,13 @@ class Talk extends React.Component<IProp, IState>{
                                 flex: 1, flexDirection: 'column'
                             }}>    
                             <Text>Start</Text>
-                            <Text>{format(start, 'h:mmA')}</Text>
+                            <Text style={{fontWeight:'800'}}>{format(start, 'h:mmA')}</Text>
                             </View>    
                             <View style={{
                                 flex: 1, flexDirection: 'column'
                             }}>  
                             <Text>Duration</Text>
-                            <Text>{`${duration} Minutes`}</Text>
+                            <Text style={{ fontWeight: '800' }}>{`${duration} Minutes`}</Text>
                             </View>    
                             {this.renderTwitter(speakerInfo)}
                             
