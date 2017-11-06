@@ -15,7 +15,7 @@ const twitterus = () => {
 }
 
 const facebookus = () => {
-  const appURL = 'facebook://gccodecamp'
+  const appURL = 'fb://profile/gccodecamp'
   const webURL = 'https://www.facebook.com/gccodecamp/'
   Linking.canOpenURL(appURL).then((supported) =>
     Linking.openURL(supported ? appURL : webURL)
