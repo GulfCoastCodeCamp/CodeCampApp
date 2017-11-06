@@ -27,7 +27,8 @@ class TalkDetailScreen extends React.Component<IProp, {}> {
                     <ScrollView style={{ height: Metrics.screenHeight }}>
                         <View style={{
                             flex: 1,
-                            margin: 10
+                            margin: 10,
+                            marginBottom:60
                         }}>
                             <TouchableOpacity onPress={() => goBack()} style={{
                                 flex:1
@@ -80,56 +81,59 @@ class TalkDetailScreen extends React.Component<IProp, {}> {
                                 <View style={{flex:1}}>
                                     <Text style={{
                                         fontWeight: "100",
-                                        margin:10
-                                        
+                                        marginLeft: 10,
+                                        marginTop:10,
+                                        marginRight:10,
                                     }}>Talk</Text>
                                     <Text style={{
                                         margin:10,
-                                        fontSize: 15,
+                                        marginLeft: 10,
+                                        marginRight: 10,
                                         fontWeight: '400',
                                         textAlign:'auto'
                                     }}>{talk.description}</Text>
+                                    <View style={{
+                                        flex: 1,
+                                        flexDirection: 'row',
+                                        alignItems: 'center',
+                                        paddingLeft: Metrics.doubleBaseMargin,
+                                        paddingRight: Metrics.doubleBaseMargin,
+                                        backgroundColor: '#E9E9EF',
+                                    }}>
+                                        <View style={{
+                                            flex: 1,
+                                            flexDirection: 'column'
+                                        }}>
+                                            <Text>Start</Text>
+                                            <Text style={{ fontWeight: '800' }}>{format(talk.time, 'h:mmA')}</Text>
+                                        </View>
+                                        <View style={{
+                                            flex: 1, flexDirection: 'column'
+                                        }}>
+                                            <Text>Duration</Text>
+                                            <Text style={{ fontWeight: '800' }}>{`${talk.duration} Minutes`}</Text>
+                                        </View>
+
+
+                                    </View>
                                 </View>
                                 <View style={{ flex: 1 }}>
                                     <Text style={{
                                         fontWeight: "100",
-                                        margin: 10
+                                        marginLeft: 10,
+                                        marginRight: 10,
 
                                     }}>Bio</Text>
                                     <Text style={{
-                                        margin:10,
+                                        marginLeft: 10,
+                                        marginRight: 10,
                                         fontSize: 15,
                                         fontWeight: '400',
                                         textAlign: 'auto'
+                                        
                                     }}>{bio}</Text>
                                 </View>
-                                <View style={{
-                                    flex: 1,
-                                    flexDirection: 'row',
-                                    alignItems: 'center',
-                                    paddingLeft: Metrics.doubleBaseMargin,
-                                    paddingRight: Metrics.doubleBaseMargin,
-                                    backgroundColor: '#E9E9EF',
-                                    borderBottomLeftRadius: 5,
-                                    borderBottomRightRadius:5
 
-                                }}>
-                                    <View style={{
-                                        flex: 1,
-                                        flexDirection: 'column'
-                                    }}>
-                                        <Text>Start</Text>
-                                        <Text style={{ fontWeight: '800' }}>{format(talk.time ,'h:mmA')}</Text>
-                                    </View>
-                                    <View style={{
-                                        flex: 1, flexDirection: 'column'
-                                    }}>
-                                        <Text>Duration</Text>
-                                        <Text style={{ fontWeight: '800' }}>{`${talk.duration} Minutes`}</Text>
-                                    </View>
-                                  
-
-                                </View>
                             </View>
                         </View>
                     </ScrollView>

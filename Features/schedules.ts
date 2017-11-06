@@ -50,14 +50,13 @@ const data = {
         "speaker": "Billy `Obie` Hardin",
         "image": "Billy",
         "title": "How I Hacked your Mother: A developers peak inside the hacker's playbook",
-        "description": `
-When building a cloud app, one of the most common cross cutting concerns is the authentication of users. For some solutions, the security implementation is handled by the application itself. In this session, we explore the use of Azure Active Directory(AAD) to provide the security services for our web or mobile apps.The application we are building is a Node.js backend API with an AngularJS front end.
+        "description": `When building a cloud app, one of the most common cross cutting concerns is the authentication of users. For some solutions, the security implementation is handled by the application itself. In this session, we explore the use of Azure Active Directory(AAD) to provide the security services for our web or mobile apps.The application we are building is a Node.js backend API with an AngularJS front end.
 
-We explore the following areas:
+        We explore the following areas:
         - Create an AngularJS App and use Git to deploy to Azure
         - Add Azure Active Directory(AD) service authentication to protect our app
         - Discuss the limitation using simple AD authentication when enabling anonymous access to some routes
-- Enhance our security by taking direct control of the Azure AD APIs in our code to consume the Jason Web Token(JWT) from the Azure Identity provider`,
+        - Enhance our security by taking direct control of the Azure AD APIs in our code to consume the Jason Web Token(JWT) from the Azure Identity provider`,
         "time": "9/30/2017 11:00 AM",
         "duration": "60",
         "track": "Web/Mobile",
