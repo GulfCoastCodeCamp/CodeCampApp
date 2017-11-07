@@ -1,9 +1,8 @@
 import React from 'react'
-import { Animated, View, Text, TouchableWithoutFeedback, Image, TouchableOpacity,Linking } from 'react-native'
-import FadeIn from 'react-native-fade-in-image'
+import { Animated, View, Text, TouchableWithoutFeedback, Image, TouchableOpacity, Linking } from 'react-native'
 import styles from './Styles/TalkStyles'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import {Metrics} from '../Themes'
+import { Metrics } from '../Themes'
 import { format } from 'date-fns'
 
 interface IProp {
@@ -22,9 +21,9 @@ interface IState {
 }
 
 class Talk extends React.Component<IProp, IState>{
-     twitterus = (handler) => {
-         const appURL = 'twitter://post?screen_name=' + handler
-         const webURL = 'https://twitter.com/intent/user?screen_name=' + handler
+    twitterus = (handler) => {
+        const appURL = 'twitter://post?screen_name=' + handler
+        const webURL = 'https://twitter.com/intent/user?screen_name=' + handler
         Linking.canOpenURL(appURL).then((supported) =>
             Linking.openURL(supported ? appURL : webURL)
         )
@@ -32,9 +31,8 @@ class Talk extends React.Component<IProp, IState>{
 
 
     renderTwitter = (speakerInfo: any) => {
-        if (speakerInfo && speakerInfo[0] && speakerInfo[0].twitter)
-        {
-            return (<TouchableOpacity style={{ margin: 10 }} onPress={() => { this.twitterus(speakerInfo[0].twitter)}}>
+        if (speakerInfo && speakerInfo[0] && speakerInfo[0].twitter) {
+            return (<TouchableOpacity style={{ margin: 10 }} onPress={() => { this.twitterus(speakerInfo[0].twitter) }}>
                 <Icon name="twitter" size={35} color="lightblue" />
             </TouchableOpacity>)
         }
@@ -100,9 +98,7 @@ class Talk extends React.Component<IProp, IState>{
                                 <Text style={styles.name}>{name}</Text>
                                 <Text style={styles.title}>{title}</Text>
                             </View>
-                            <FadeIn>
-                                <Icon name="user-circle" color="lightblue" size={60}/>
-                            </FadeIn>
+                            <Icon name="user-circle" color="lightblue" size={60} />
 
                         </View>
                         <View style={{
@@ -110,22 +106,22 @@ class Talk extends React.Component<IProp, IState>{
                             flexDirection: 'row',
                             alignItems: 'center',
                             marginLeft: Metrics.doubleBaseMargin,
-                            marginRight:Metrics.doubleBaseMargin
+                            marginRight: Metrics.doubleBaseMargin
                         }}>
                             <View style={{
                                 flex: 1, flexDirection: 'column'
-                            }}>    
-                            <Text>Start</Text>
-                            <Text style={{fontWeight:'800'}}>{format(start, 'h:mmA')}</Text>
-                            </View>    
+                            }}>
+                                <Text>Start</Text>
+                                <Text style={{ fontWeight: '800' }}>{format(start, 'h:mmA')}</Text>
+                            </View>
                             <View style={{
                                 flex: 1, flexDirection: 'column'
-                            }}>  
-                            <Text>Duration</Text>
-                            <Text style={{ fontWeight: '800' }}>{`${duration} Minutes`}</Text>
-                            </View>    
+                            }}>
+                                <Text>Duration</Text>
+                                <Text style={{ fontWeight: '800' }}>{`${duration} Minutes`}</Text>
+                            </View>
                             {this.renderTwitter(speakerInfo)}
-                            
+
                         </View>
                     </Animated.View>
                 </TouchableWithoutFeedback>
