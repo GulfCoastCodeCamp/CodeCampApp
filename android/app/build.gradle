@@ -157,6 +157,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-video')
       compile(project(':react-native-maps')){
     exclude group: 'com.google.android.gms'
   }
