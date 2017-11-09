@@ -7,6 +7,7 @@ import GradientBackgroud from '../Components/GradientBackgroud'
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 import Video from 'react-native-video'
+import * as Animatable from 'react-native-animatable'
 
 
 
@@ -30,13 +31,16 @@ export default class LaunchScreen extends Component {
               <Image source={Images.launch} style={styles.logo} />
             </View>
 
-            {!this.state.playVideo && <View style={styles.section} >
+            {!this.state.playVideo && <Animatable.View
+              animation='zoomIn'
+              iterationCount={1}
+              style={styles.section} >
               <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
                 The cutting edge will arrive gulf coast again {'\n'}
 
                 Fall 2018!
             </Text>
-            </View>}
+            </Animatable.View>}
             {this.state.playVideo &&
               <Video
                 ref={(ref) => {
