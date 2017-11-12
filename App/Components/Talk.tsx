@@ -105,8 +105,11 @@ class Talk extends React.Component<IProp, IState>{
                             flex: 1,
                             flexDirection: 'row',
                             alignItems: 'center',
-                            marginLeft: Metrics.doubleBaseMargin,
-                            marginRight: Metrics.doubleBaseMargin
+                            paddingLeft: Metrics.doubleBaseMargin,
+                            paddingRight: Metrics.doubleBaseMargin,
+                            backgroundColor: 'gray',
+                            borderBottomLeftRadius: 5,
+                            borderBottomRightRadius:5
                         }}>
                             <View style={{
                                 flex: 1, flexDirection: 'column'
