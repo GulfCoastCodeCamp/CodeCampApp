@@ -1,4 +1,4 @@
-package com.codecamp;
+package com.gulfcoastcodecamp.codecamp;
 
 import com.facebook.react.ReactActivity;
 
