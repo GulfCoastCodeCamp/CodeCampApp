@@ -6,12 +6,14 @@ target 'codecamp' do
   # use_frameworks!
 
   # Pods for codecamp
-  pod 'MobileCenter/Crashes', '~> 0.13.0'
-  pod 'MobileCenter/Analytics', '~> 0.13.0'
-  pod 'RNMobileCenterShared', '~> 0.10.0'
+  pod 'AppCenter/Crashes', '~> 1.7.1'
+  pod 'AppCenter/Analytics', '~> 1.7.1'
+  pod 'AppCenterReactNativeShared', '~> 1.6.0'
+
 
   
 
+  platform :ios, '9.0'
   target 'codecampTests' do
     inherit! :search_paths
     # Pods for testing
