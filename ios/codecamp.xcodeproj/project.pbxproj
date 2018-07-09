@@ -51,7 +51,6 @@
 		95A9E7B5D4CB49A498CCEA0A /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19F2C5E9DD9B4F669746F965 /* FontAwesome.ttf */; };
 		97799CF3608F4385B6B14F24 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA12DC6540E472185E32303 /* libz.tbd */; };
 		9A085E624C732B8A106CA363 /* libPods-codecamp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E784267C2BD5982C3E2D5566 /* libPods-codecamp-tvOSTests.a */; };
-		9B16CE4AD56346508F960AFB /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8787A0623405D99722B8D /* libRNDeviceInfo.a */; };
 		9D61D917BDFA4773BF9641EA /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7231FEA2E9F4A4E96771049 /* Feather.ttf */; };
 		AC6BE3F0300748DCB0B951C4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF59178088A64AC0AAC5CCDD /* SimpleLineIcons.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -61,7 +60,6 @@
 		EADF16A32D964081A04F3C29 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53E0F7D618C54B5FA12763F9 /* MaterialCommunityIcons.ttf */; };
 		F1FFB9547BAD4E22BB4D2B2D /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7061C4FE39F848CE860E5066 /* libAppCenterReactNative.a */; };
 		F3F5C5FAFAD61308E2631B27 /* libPods-codecamp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3F31ACEB8589C92BC26ED6 /* libPods-codecamp-tvOS.a */; };
-		FACA4F9CE5C64E3A90ABE62A /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01E0F3A4AD4643827E56CE /* libRCTVideo.a */; };
 		FF959D8520E64CEA8FC64FB7 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 479DEF58DFC9458BB0760E8C /* libAirMaps.a */; };
 /* End PBXBuildFile section */
 
@@ -515,11 +513,9 @@
 				60BBDD7406924AE6B9D677BB /* libCodePush.a in Frameworks */,
 				97799CF3608F4385B6B14F24 /* libz.tbd in Frameworks */,
 				CF4F3A5BFD3B44C8A21A6ED5 /* libReactNativeConfig.a in Frameworks */,
-				9B16CE4AD56346508F960AFB /* libRNDeviceInfo.a in Frameworks */,
 				C81FE4F14FCE49609332F84E /* libBVLinearGradient.a in Frameworks */,
 				FF959D8520E64CEA8FC64FB7 /* libAirMaps.a in Frameworks */,
 				468AD478442A4812BA910631 /* libRNVectorIcons.a in Frameworks */,
-				FACA4F9CE5C64E3A90ABE62A /* libRCTVideo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
