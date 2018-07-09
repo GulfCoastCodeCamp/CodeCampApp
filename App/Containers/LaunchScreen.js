@@ -1,72 +1,51 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, Linking } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
 import PreviousCampButton from '../../App/Components/PreviousCampButton'
-import { Images ,Metrics} from '../Themes'
+import { Images, Metrics } from '../Themes'
 import GradientBackgroud from '../Components/GradientBackgroud'
 // Styles
 import styles from './Styles/LaunchScreenStyles'
-import Video from 'react-native-video'
 import * as Animatable from 'react-native-animatable'
+import RoundedButton from '../Components/RoundedButton.js';
 
+const regiesterNow = () => {
+  const webURL = 'https://www.gulfcoastcodecamp.com/';
+  Linking.openURL(webURL);
+}
 
 
 export default class LaunchScreen extends Component {
-  constructor() {
-    super();
-    this.state = {
-      playVideo: true
-    }
-  }
-  componentDidMount() {
-  }
+
+
   render() {
     return (
       <View style={styles.mainContainer}>
         <GradientBackgroud>
           <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
           <ScrollView style={styles.container}>
-
             <View style={styles.centered}>
               <Image source={Images.launch} style={styles.logo} />
             </View>
-
-            {!this.state.playVideo && <Animatable.View
+            <Animatable.View
               animation='zoomIn'
               iterationCount={1}
               style={styles.section} >
-              <Text style={{ fontSize: 35, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
-                The cutting edge will arrive gulf coast again {'\n'}
+              <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white', textAlign: 'center', marginTop: Metrics.marginVertical }}>
+                Immerse yourself in techologies with Gulf Coast Code Camp at downtown Mobile Alabama this October!
+              </Text>
+            </Animatable.View>
 
-                Fall 2018!
-            </Text>
-            </Animatable.View>}
-            {this.state.playVideo &&
-              <Video
-                ref={(ref) => {
-                  this.player = ref
-                }}
-                style={{
-                  marginTop: 20,
-                  width: Metrics.screenWidth,
-                  height: Metrics.screenWidth
-                }}
-                source={require('../Images/GulfCoastCodeCamp2017.mp4')}
-                rate={1.0}
-                muted
-                paused={false}
-                resizeMode="contain"
-                repeat={false}
-                onEnd={() => { this.setState({ playVideo: false }) }}
-              />
-            }
+            <RoundedButton onPress={() => regiesterNow()}>
+              Register Now
+            </RoundedButton>
 
             <PreviousCampButton>
               Gulf Coast Code Camp 2017
-          </PreviousCampButton>
+            </PreviousCampButton>
             <DevscreensButton />
           </ScrollView>
-          
+
         </GradientBackgroud>
 
       </View>

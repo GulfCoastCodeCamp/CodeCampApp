@@ -65,16 +65,16 @@ class VenueMap extends React.Component<VenueMapProps, VenueMapState> {
         this.onRegionChange = this.onRegionChange.bind(this)
     }
 
-    componentWillReceiveProps(newProps) {
-        /* ***********************************************************
-        * STEP 3
-        * If you wish to recenter the map on new locations any time the
-        * props change, do something like this:
-        *************************************************************/
-        // this.setState({
-        //   region: calculateRegion(newProps.locations, { latPadding: 0.1, longPadding: 0.1 })
-        // })
-    }
+    // componentWillReceiveProps(newProps) {
+    //     /* ***********************************************************
+    //     * STEP 3
+    //     * If you wish to recenter the map on new locations any time the
+    //     * props change, do something like this:
+    //     *************************************************************/
+    //     // this.setState({
+    //     //   region: calculateRegion(newProps.locations, { latPadding: 0.1, longPadding: 0.1 })
+    //     // })
+    // }
 
     onRegionChange(newRegion) {
         /* ***********************************************************
