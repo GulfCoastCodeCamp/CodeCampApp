@@ -27,8 +27,8 @@ class App extends Component {
     )
   }
 }
-
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
 // allow reactotron overlay for fast design in dev mode
 export default DebugConfig.useReactotron
   ? console.tron.overlay(App)
-  : codePush(App)
+  : codePush(codePushOptions)(App)

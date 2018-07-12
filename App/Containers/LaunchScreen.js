@@ -32,7 +32,7 @@ export default class LaunchScreen extends Component {
               iterationCount={1}
               style={styles.section} >
               <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white', textAlign: 'center', marginTop: Metrics.marginVertical }}>
-                Immerse yourself in techologies with Gulf Coast Code Camp at downtown Mobile Alabama this October!
+                Immerse yourself in techologies with Gulf Coast Code Camp at downtown Mobile Alabama this Fall!
               </Text>
             </Animatable.View>
 

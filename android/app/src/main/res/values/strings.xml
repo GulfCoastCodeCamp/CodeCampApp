@@ -1,5 +1,5 @@
 <resources>
-    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">19e7ad7a-1b33-427e-b2ed-3141c49e9325</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">V1KnglxZMl5EY2cAThkoUqe2NHh6184745fb-951f-4f35-883a-b3020b9a4e9d</string>
     <string name="app_name">codecamp</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true">ALWAYS_SEND</string>
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true">ALWAYS_SEND</string>
