@@ -95,14 +95,13 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
-
+    compileSdkVersion 26
+    buildToolsVersion '26.0.1'
     defaultConfig {
         applicationId "com.gulfcoastcodecamp.codecamp"
-        minSdkVersion 16
-        targetSdkVersion 22
-        versionCode 2
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 3
         versionName "2.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -127,7 +126,7 @@ android {
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "x86":2]
+            def versionCodes = ["armeabi-v7a": 1, "x86": 2]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -135,11 +134,13 @@ android {
             }
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
     compile project(':react-native-vector-icons')
-    compile(project(':react-native-maps')){
+    compile(project(':react-native-maps')) {
         exclude group: 'com.google.android.gms'
     }
     compile 'com.google.android.gms:play-services-base:+'
@@ -151,22 +152,23 @@ dependencies {
     compile project(':appcenter-crashes')
     compile project(':appcenter-analytics')
     compile project(':appcenter')
-    compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
-        compile ("com.google.android.gms:play-services-base:10.0.1") {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.facebook.react:react-native:+'
+    // From node_modules
+    compile('com.google.android.gms:play-services-base:10.0.1') {
         force = true;
     }
-    compile ("com.google.android.gms:play-services-maps:10.0.1") {
+    compile('com.google.android.gms:play-services-maps:10.0.1') {
         force = true;
     }
-    compile ("com.google.android.gms:play-services-gcm:10.0.1") {
+    compile('com.google.android.gms:play-services-gcm:10.0.1') {
         force = true;
     }
-    compile ('com.google.firebase:firebase-core:10.0.1') {
+    compile('com.google.firebase:firebase-core:10.0.1') {
         force = true;
     }
-    compile ('com.google.firebase:firebase-messaging:10.0.1') {
+    compile('com.google.firebase:firebase-messaging:10.0.1') {
         force = true;
     }
 }
