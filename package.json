@@ -28,9 +28,9 @@
   },
   "dependencies": {
     "apisauce": "^0.15.2",
-    "appcenter": "^1.6.0",
-    "appcenter-analytics": "^1.6.0",
-    "appcenter-crashes": "^1.6.0",
+    "appcenter": "^1.13.0",
+    "appcenter-analytics": "^1.13.0",
+    "appcenter-crashes": "^1.13.0",
     "date-fns": "^1.29.0",
     "format-json": "^1.0.3",
     "lodash": "^4.17.10",
