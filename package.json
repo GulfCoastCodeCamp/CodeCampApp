@@ -35,7 +35,7 @@
     "appcenter-crashes": "^1.6.0",
     "date-fns": "^1.29.0",
     "format-json": "^1.0.3",
-    "lodash": "^4.17.12",
+    "lodash": "^4.17.21",
     "prop-types": "15.6.2",
     "querystringify": "2.0.0",
     "ramda": "^0.25.0",
